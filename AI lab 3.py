@@ -7,6 +7,8 @@ class Model_Reflex_Agent:
         self.room_temp = room_temp
 
     def performance(self):
+        action = None
+        
         if self.room_temp > self.goal_temp:
             action = "Turn ON the AC"
         else:
@@ -37,4 +39,5 @@ for room, temp in rooms.items():
     print(room, end=" :\t")
     agent.read_temp(temp)
     agent.actuator()
+
 
